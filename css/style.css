@@ -1,0 +1,289 @@
+/*Maintaing this single CSS file for all the three HTML files */
+
+@import url('https://fonts.googleapis.com/css?family=Bangers');
+
+@import url('https://fonts.googleapis.com/css?family=Krub:400,700');
+
+body {
+  background-image: url('../images/Background.jpg');
+  background-size: cover;
+  padding: 0px;
+  margin: 0px;
+  margin-bottom: 30px;
+  background-attachment: fixed;
+  word-break: break-all;
+ 
+}
+body::-webkit-scrollbar{
+  display:none;
+}
+.search-section{
+  background: transparent;
+  width: 10px;
+  margin-top: -10px;
+}
+
+.about-sec {
+  color:whitesmoke; 
+  /* overflow-x: scroll; */
+  /* height: 1px; */
+}
+
+#navbar-brand{
+  left: 0px;
+  right: 0px;
+  display: flex;
+  padding: 11px 30px;
+  height: 1px;
+  border-radius: 40%;
+}
+
+#logo {
+  position: absolute;
+  left: 4px;
+  top: 10px;
+  color: whitesmoke;
+  border-radius: 50%;
+  margin-left: 20px;
+  animation: animate 5s linear infinite;
+  
+}
+@keyframes animate {
+  0%
+  {
+      filter: hue-rotate(0deg);
+  }
+  100%
+  {
+      filter: hue-rotate(360deg);
+  }
+  }
+  #navbar-brand h1{
+    color      : whitesmoke;
+    font-size  : 30px;
+    font-weight: normal;
+    font-family: monospace!important;
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    animation: animate 5s linear infinite;
+ } 
+ .nav-item{
+  margin: 0px 20px;
+  position: relative;
+  left: 1100px;
+  top: -20px;
+  font-weight:lighter;
+  font-size:25px;
+  color: whitesmoke !important;
+}  
+ a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+a{
+  color: whitesmoke !important;
+  text-decoration: none !important;
+  box-shadow : 5px 7px 15px rgb(173, 16, 60);
+  animation: animate 5s linear infinite;
+}
+.nav-item a:hover,
+a:active {
+    color: white;
+    box-shadow: 0 1rem 2rem rgba(black, .4);
+    transform: rotate(5deg) scale(1.2);
+    padding: 2px;
+    list-style: none;
+}
+.search-input{
+  width: 750px !important; 
+  border-radius:50px !important;
+  position: relative;
+  top:30px;
+  height: 30px !important;
+  font-family:monospace;
+  font-size:18px;
+  font-weight: bold !important;
+  
+}
+::placeholder{
+  font-size:20px;
+  color:darkgrey;
+  position: relative;
+  left:8px;
+} 
+.search-btn{
+  position: relative;
+  left: 700px;
+  bottom: 30px;
+  height:45px;
+  border-radius: 60px;
+} 
+
+.search-container {
+  width: 500px !important;
+  padding: 50px;
+ 
+}
+#search-form{
+  top:200px;
+}
+
+.result-section {
+  background-color: transparent;
+  font-family:monospace;
+}
+.result-section h2 {
+  text-align: center;
+  padding: 20px 0px;
+}
+
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color:rgb(159, 239, 239);
+  color: black;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+  font-family: monospace;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+/*  Mobile Responsive  */
+@media only screen and (max-width: 768px) {
+  .search-container {
+    width: 100% !important;
+    padding: 50px;
+  }
+
+  div#superhero {
+    width: 100%;
+  }
+}
+
+#img-cont img{
+  position:relative;
+  height:300px;
+  width: 300px;
+  border-radius:5px;
+  border-style: groove;
+
+}
+
+  #title h1{
+    background-color: black;
+    color:whitesmoke;
+    font-size  : 25px;
+    font-weight: normal;
+    font-family:monospace !important;
+    position: absolute;
+    left: 500px;
+    width:500px;
+    top:40px;
+  }
+
+  #info{
+    font-family:monospace;
+    font-weight: bold;
+    overflow-x: scroll auto !important;
+  }
+  #details{
+    position: relative;
+    bottom: 280px;
+    left: 320px;
+    font-size: 20px;
+    font-family:monospace;
+  }
+  .backbtn{
+    position:relative;
+    bottom: 320px;
+    height: 0px !important;
+    /* right: 0px; */
+    left: 1200px;
+    }
+    
+    a{
+      color:#fff;
+      font-size  : 30px;
+      font-weight:lighter;
+      font-family: monospace;
+    
+    }
+    #fav,#learn-more{
+      font-family: monospace;
+      background-color: black;
+      color: whitesmoke;
+      border-color: black;
+      /* position: relative; */
+    }
+    #fav:hover{
+      background-color: whitesmoke;
+      color: black;
+    }
+    #learn-more:hover{
+      background-color: whitesmoke;
+      color: black;
+    }
+
+    #querySection{
+      color:whitesmoke;
+      font-size: 20px;
+      font-family: monospace;
+    }
+   
